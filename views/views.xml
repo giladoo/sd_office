@@ -25,7 +25,7 @@
                     <field name="partner_id" invisible="1" />
                     <field name="visit_purpose" type="row" group="True" />
                     <field name="visit_type" type="row" group="True"/>
-                    <field name="start_date" type="row" interval="day"  group="True" />
+                    <field name="start_date" type="row" interval="day"  />
                     <field name="create_uid" invisible="1" />
                 </graph>
             </field>
