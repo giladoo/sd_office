@@ -18,15 +18,15 @@
             </field>
         </record>
         <record model="ir.ui.view" id="sd_office_visitors_graph">
-            <field name="name">Visitors List</field>
+            <field name="name">Visitors Graph</field>
             <field name="model">sd_office.visitors</field>
             <field name="arch" type="xml">
                 <graph simple="1" >
-<!--                    <field name="partner_id" type="measure" />-->
+                    <field name="partner_id" invisible="1" />
                     <field name="visit_purpose" type="row" group="True" />
                     <field name="visit_type" type="row" group="True"/>
                     <field name="start_date" type="row" interval="day"  group="True" />
-<!--                    <field name="create_uid" />-->
+                    <field name="create_uid" invisible="1" />
                 </graph>
             </field>
         </record>
