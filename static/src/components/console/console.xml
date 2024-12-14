@@ -8,7 +8,7 @@
                            value="state.user.name" />
 
                 <VisitorsCard name="state.visitors.name"
-                              onClick="() => onClickDataCard(state.visitors.name)"
+                              onClick="() => onClickDataCard(state.visitors.id)"
                               visits="state.visitors.visits" />
 
             </div>

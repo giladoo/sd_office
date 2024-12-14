@@ -51,6 +51,7 @@
                     <field name="visit_purpose" />
                     <field name="start_date"/>
                     <field name="end_date"/>
+<!--                    <filter name="today" string="Today" domain="[ ('start_date', '&gt;=', (datetime.datetime.now().replace(hour=0, minute=0, second=0) - datetime.timedelta(hours=3, minutes=30)).strftime('%Y-%m-%d %H:%M:%S')),]"/>-->
                     <filter name="ongoing" string="Ongoing" domain="['|', ('end_date', '=', False),('write_date', '&gt;', (datetime.datetime.now() - datetime.timedelta(hours=3, minutes=31)).strftime('%Y-%m-%d %H:%M:%S'))]"/>
                     <filter name="visit_type" string="Visit Type" context="{'group_by': 'visit_type'}"/>
                     <filter name="visit_purpose" string="Visit Purpose" context="{'group_by': 'visit_purpose'}"/>

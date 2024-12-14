@@ -5,8 +5,8 @@ import { OfficeConsole } from "../console/console"
 export class VisitorsCard extends Component {
     static template = "visitors_card"
     static props = {
-        name: String,
-        onClick: Function,
+        name: '',
+        onClick: { type: Function },
         visits: '',
     }
 

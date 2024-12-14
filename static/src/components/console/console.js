@@ -21,6 +21,7 @@ export class OfficeConsole extends Component {
                 date: '1403/09/25'
             },
             visitors: {
+                id: 'visitors',
                 name: _t("Visitors"),
                 value_list: '0',
                 visits: '',
@@ -37,11 +38,11 @@ export class OfficeConsole extends Component {
     }
     onClickDataCard(name){
         console.log('name:', name)
-        if( name == 'Visitors'){
+        if( name == 'visitors'){
             this.action.doAction({
 //            name: "Loading Plan",
             res_model: "sd_office.visitors",
-//            res_id: this.actionId,
+//            res_id: 'this.actionId',
             views: [[false, "list"],[false, "graph"],],
             type: "ir.actions.act_window",
             view_mode: "list",
