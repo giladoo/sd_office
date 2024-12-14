@@ -21,7 +21,7 @@
             <field name="name">Visitors Graph</field>
             <field name="model">sd_office.visitors</field>
             <field name="arch" type="xml">
-                <graph simple="1" >
+                <graph sample="1" >
                     <field name="partner_id" invisible="1" />
                     <field name="visit_purpose" type="row" group="True" />
                     <field name="visit_type" type="row" group="True"/>
