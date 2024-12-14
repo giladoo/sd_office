@@ -3,10 +3,13 @@
     <t t-name="sd_office.console_template" owl="1">
         <div class="container">
             <div class="row mt-4">
+                <DataCards name="state.user.date"
+                           onClick="() => false"
+                           value="state.user.name" />
+
                 <VisitorsCard name="state.visitors.name"
                               onClick="() => onClickDataCard(state.visitors.name)"
                               visits="state.visitors.visits" />
-<!--                <DataCards name="'bb'" onClick="e => console.log(e)" value="'bbbb'" />-->
 
             </div>
         </div>

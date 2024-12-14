@@ -3,11 +3,13 @@ import { Component } from "@odoo/owl"
 import { OfficeConsole } from "../console/console"
 
 export class DataCards extends Component {
-    setup(){
-        console.log('DataCards')
+    static template = "data_cards"
+    static components = { ...OfficeConsole.components, DataCards }
+    static props = {
+        name: String,
+        value: String,
+        onClick: Function,
     }
 }
 
-
-DataCards.template = "data_cards"
 OfficeConsole.components = { ...OfficeConsole.components, DataCards }

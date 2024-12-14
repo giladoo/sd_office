@@ -94,6 +94,12 @@
             <field name="context">{'search_default_ongoing': 1,}</field>
         </record>
 
+        <record model="ir.actions.act_window" id="action_window_sd_office_visitors_graph">
+            <field name="name">Visitors</field>
+            <field name="res_model">sd_office.visitors</field>
+            <field name="view_mode">graph</field>
+        </record>
+
         <record model="ir.actions.act_window" id="action_window_sd_office_visit_type">
             <field name="name">Visit Type</field>
             <field name="res_model">sd_office.visit_type</field>
@@ -117,7 +123,17 @@
                   parent="root_menu"
                   action="action_window_sd_office_visitors"/>
 
+        <menuitem name="Reports"
+                  id="reports_menu"
+                  parent="root_menu"/>
+
+        <menuitem name="Visitors Graph"
+                  id="visitors_graph_menu"
+                  parent="reports_menu"
+                  action="action_window_sd_office_visitors_graph"/>
+
         <menuitem name="Configurations"
+                  sequence="100"
                   id="configurations_menu"
                   parent="root_menu"/>
 

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-14 06:15+0000\n"
-"PO-Revision-Date: 2024-12-14 09:48+0330\n"
+"POT-Creation-Date: 2024-12-14 20:57+0000\n"
+"PO-Revision-Date: 2024-12-15 00:30+0330\n"
 "Last-Translator: Arash Homayounfar <homayounfar@msn.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -46,11 +46,6 @@ msgid "Created on"
 msgstr ""
 
 #. module: sd_office
-#: model:ir.actions.client,name:sd_office.action_window_sd_office_root
-msgid "Dashboard Configuration"
-msgstr ""
-
-#. module: sd_office
 #: model:sd_office.visit_purpose,name:sd_office.record_102
 msgid "Delivery"
 msgstr "پیک"
@@ -68,11 +63,6 @@ msgstr ""
 #: model:sd_office.visit_type,name:sd_office.record_2
 msgid "Email"
 msgstr "ایمیل"
-
-#. module: sd_office
-#: model_terms:ir.ui.view,arch_db:sd_office.sd_office_visitors_list
-msgid "End"
-msgstr "پایان"
 
 #. module: sd_office
 #: model:ir.model.fields,field_description:sd_office.field_sd_office_console__end_date
@@ -140,6 +130,7 @@ msgid "Name"
 msgstr "نام"
 
 #. module: sd_office
+#: model:ir.actions.client,name:sd_office.action_window_sd_office_root
 #: model:ir.ui.menu,name:sd_office.root_menu
 msgid "Office Admin"
 msgstr "مدیریت دفتر"
@@ -175,6 +166,11 @@ msgstr "تلفن"
 #: code:addons/sd_office/static/src/components/visitors/visitors_card.xml:0
 msgid "Quantity"
 msgstr "تعداد"
+
+#. module: sd_office
+#: model:ir.ui.menu,name:sd_office.reports_menu
+msgid "Reports"
+msgstr "گزارش ها"
 
 #. module: sd_office
 #: model:ir.model,name:sd_office.model_sd_office_console
@@ -214,35 +210,40 @@ msgid "Visit"
 msgstr "حضوری"
 
 #. module: sd_office
+#: model:ir.actions.act_window,name:sd_office.action_window_sd_office_visit_purpose
 #: model:ir.model.fields,field_description:sd_office.field_sd_office_visitors__visit_purpose
+#: model:ir.ui.menu,name:sd_office.visit_purpose_menu
+#: model_terms:ir.ui.view,arch_db:sd_office.sd_office_visitors_search
 msgid "Visit Purpose"
 msgstr "دلیل تماس"
 
 #. module: sd_office
+#: model:ir.actions.act_window,name:sd_office.action_window_sd_office_visit_type
 #: model:ir.model.fields,field_description:sd_office.field_sd_office_visitors__visit_type
+#: model:ir.ui.menu,name:sd_office.visit_type_menu
+#: model_terms:ir.ui.view,arch_db:sd_office.sd_office_visitors_search
 msgid "Visit Type"
 msgstr "نوع تماس"
 
 #. module: sd_office
-#: model:ir.ui.menu,name:sd_office.visit_purpose_menu
-msgid "Visitor Purpose"
-msgstr "دلیل تماس"
-
-#. module: sd_office
-#: model:ir.ui.menu,name:sd_office.visit_type_menu
-msgid "Visitor Type"
-msgstr "نوع تماس"
-
-#. module: sd_office
+#. odoo-javascript
+#: code:addons/custom/addons/sd_office/static/src/components/console/console.js:0
+#: code:addons/sd_office/static/src/components/console/console.js:0
 #: model:ir.actions.act_window,name:sd_office.action_window_sd_office_visitors
+#: model:ir.actions.act_window,name:sd_office.action_window_sd_office_visitors_graph
 #: model:ir.ui.menu,name:sd_office.visitors_menu
 msgid "Visitors"
 msgstr "تماس ها"
 
 #. module: sd_office
+#: model:ir.ui.menu,name:sd_office.visitors_graph_menu
+msgid "Visitors Graph"
+msgstr "نمودار تماس ها"
+
+#. module: sd_office
 #: model:ir.actions.act_window,name:sd_office.console_wizard_action
 msgid "annual Report"
-msgstr ""
+msgstr "گزارش سالانه"
 
 #. module: sd_office
 #: model:ir.module.category,description:sd_office.module_category_sd_office
@@ -272,14 +273,4 @@ msgstr ""
 #. module: sd_office
 #: model:ir.model,name:sd_office.model_sd_office_visitors
 msgid "sd_office.visitors"
-msgstr ""
-
-#. module: sd_office
-#: model:ir.actions.act_window,name:sd_office.action_window_sd_office_visit_purpose
-msgid "visit Purpose"
-msgstr ""
-
-#. module: sd_office
-#: model:ir.actions.act_window,name:sd_office.action_window_sd_office_visit_type
-msgid "visit Type"
 msgstr ""

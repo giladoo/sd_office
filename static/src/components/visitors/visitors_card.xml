@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates>
     <t t-name="visitors_card" owl="1"  >
-        <div class="col-sm-3 m-0 p-0"  >
+        <div class="col col-sm-6 col-md-4 m-0 p-0"  >
 
             <div class="shadow border m-2 p-3 bg-white text-center sd_office_visitors_card "
                  t-on-click="props.hasOwnProperty('onClick') ? ()=>props.onClick() : ''"
@@ -27,6 +27,11 @@
                 </div>
 <!--                <div class="h3 text-muted"><span t-esc="props.status"></span></div>-->
 <!--                <div class="text-muted" t-raw="props.link"></div>-->
+<!--            <div class="row mx-0 border">-->
+<!--                <div class="col btn btn-primary m-2">b1</div>-->
+<!--                <div class="col btn btn-primary m-2">b2</div>-->
+<!--                <div class="col btn btn-primary m-2">b3</div>-->
+<!--            </div>-->
             </div>
         </div>
 
