@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="sd_office.console_template" owl="1">
+        <div class="container">
+            <div class="row">
+                <VisitorsCard name="state.visitors.name"
+                              onClick="() => onClickDataCard(state.visitors.name)"
+                              visits="state.visitors.visits" />
+<!--                <DataCards name="'bb'" onClick="e => console.log(e)" value="'bbbb'" />-->
+
+            </div>
+        </div>
+
+    </t>
+</templates>

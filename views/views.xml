@@ -1,0 +1,126 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="sd_office_visitors_list">
+            <field name="name">Visitors List</field>
+            <field name="model">sd_office.visitors</field>
+            <field name="arch" type="xml">
+                <list editable="bottom" expand="1">
+                    <button name="visit_ended" type="object" class="btn btn-secondary" string="End"></button>
+                    <field name="partner_id" widget="many2one_avatar"/>
+                    <field name="mobile"/>
+                    <field name="subject"/>
+                    <field name="visit_type" options="{'no_create_edit': 1, 'no_open': 1}"/>
+                    <field name="visit_purpose" options="{'no_create_edit': 1, 'no_open': 1}"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="create_uid" optional="hide"/>
+                </list>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="sd_office_visitors_graph">
+            <field name="name">Visitors List</field>
+            <field name="model">sd_office.visitors</field>
+            <field name="arch" type="xml">
+                <graph simple="1" >
+<!--                    <field name="partner_id" type="measure" />-->
+                    <field name="visit_purpose" type="row" group="True" />
+                    <field name="visit_type" type="row" group="True"/>
+                    <field name="start_date" type="row" interval="day"  group="True" />
+<!--                    <field name="create_uid" />-->
+                </graph>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="sd_office_visitors_search">
+            <field name="name">Visitors List</field>
+            <field name="model">sd_office.visitors</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="partner_id"/>
+                    <field name="mobile"/>
+                    <field name="subject"/>
+                    <field name="visit_type" />
+                    <field name="visit_purpose" />
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <filter name="ongoing" string="Ongoing" domain="[('end_date', '=', False)]"/>
+                    <filter name="visit_type" string="Visit Type" context="{'group_by': 'visit_type'}"/>
+                    <filter name="visit_purpose" string="Visit Purpose" context="{'group_by': 'visit_purpose'}"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="sd_office_visit_type_list">
+            <field name="name">Visit Type List</field>
+            <field name="model">sd_office.visit_type</field>
+            <field name="arch" type="xml">
+                <list editable="bottom">
+                    <field name="sequence" widget="handle"/>
+                    <field name="name"/>
+                </list>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="sd_office_visit_purpose_list">
+            <field name="name">Visit Purpose List</field>
+            <field name="model">sd_office.visit_purpose</field>
+            <field name="arch" type="xml">
+                <list editable="bottom">
+                    <field name="sequence" widget="handle"/>
+
+                    <field name="name"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- ==================================================  Action Window ====================-->
+
+        <record model="ir.actions.client" id="action_window_sd_office_root">
+            <field name="name">Office Admin</field>
+            <field name="tag">sd_office.sd_office_console</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_window_sd_office_visitors">
+            <field name="name">Visitors</field>
+            <field name="res_model">sd_office.visitors</field>
+            <field name="view_mode">list,graph</field>
+            <field name="context">{'search_default_ongoing': 1,}</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_window_sd_office_visit_type">
+            <field name="name">Visit Type</field>
+            <field name="res_model">sd_office.visit_type</field>
+            <field name="view_mode">list</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_window_sd_office_visit_purpose">
+            <field name="name">Visit Purpose</field>
+            <field name="res_model">sd_office.visit_purpose</field>
+            <field name="view_mode">list</field>
+        </record>
+
+        <!-- ==================================================  Menu ====================-->
+
+        <menuitem name="Office Admin"
+                  id="root_menu"
+                  action="action_window_sd_office_root"/>
+
+        <menuitem name="Visitors"
+                  id="visitors_menu"
+                  parent="root_menu"
+                  action="action_window_sd_office_visitors"/>
+
+        <menuitem name="Configurations"
+                  id="configurations_menu"
+                  parent="root_menu"/>
+
+        <menuitem name="Visit Type"
+                  id="visit_type_menu"
+                  parent="configurations_menu"
+                  action="action_window_sd_office_visit_type"/>
+
+        <menuitem name="Visit Purpose"
+                  id="visit_purpose_menu"
+                  parent="configurations_menu"
+                  action="action_window_sd_office_visit_purpose"/>
+    </data>
+</odoo>

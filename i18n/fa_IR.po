@@ -1,0 +1,285 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sd_office
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-14 06:15+0000\n"
+"PO-Revision-Date: 2024-12-14 09:48+0330\n"
+"Last-Translator: Arash Homayounfar <homayounfar@msn.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fa\n"
+"X-Generator: Poedit 2.2\n"
+
+#. module: sd_office
+#: model:res.groups,name:sd_office.group_sd_office_admins
+msgid "Administrators"
+msgstr ""
+
+#. module: sd_office
+#: model:ir.ui.menu,name:sd_office.configurations_menu
+msgid "Configurations"
+msgstr "پیکربندی"
+
+#. module: sd_office
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_console__create_uid
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_settings__create_uid
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visit_purpose__create_uid
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visit_type__create_uid
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visitors__create_uid
+msgid "Created by"
+msgstr "ایجاد شده توسط"
+
+#. module: sd_office
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_console__create_date
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_settings__create_date
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visit_purpose__create_date
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visit_type__create_date
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visitors__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sd_office
+#: model:ir.actions.client,name:sd_office.action_window_sd_office_root
+msgid "Dashboard Configuration"
+msgstr ""
+
+#. module: sd_office
+#: model:sd_office.visit_purpose,name:sd_office.record_102
+msgid "Delivery"
+msgstr "پیک"
+
+#. module: sd_office
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_console__display_name
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_settings__display_name
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visit_purpose__display_name
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visit_type__display_name
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visitors__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sd_office
+#: model:sd_office.visit_type,name:sd_office.record_2
+msgid "Email"
+msgstr "ایمیل"
+
+#. module: sd_office
+#: model_terms:ir.ui.view,arch_db:sd_office.sd_office_visitors_list
+msgid "End"
+msgstr "پایان"
+
+#. module: sd_office
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_console__end_date
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visitors__end_date
+msgid "End Date"
+msgstr "تاریخ پایان"
+
+#. module: sd_office
+#. odoo-python
+#: code:addons/custom/addons/sd_office/models/models.py:0
+#: code:addons/sd_office/models/models.py:0
+msgid "Ended"
+msgstr "پایان یافته"
+
+#. module: sd_office
+#: model:sd_office.visit_purpose,name:sd_office.record_101
+msgid "Guarantee"
+msgstr "گارانتی"
+
+#. module: sd_office
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_console__id
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_settings__id
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visit_purpose__id
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visit_type__id
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visitors__id
+msgid "ID"
+msgstr ""
+
+#. module: sd_office
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_console__write_uid
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_settings__write_uid
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visit_purpose__write_uid
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visit_type__write_uid
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visitors__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sd_office
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_console__write_date
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_settings__write_date
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visit_purpose__write_date
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visit_type__write_date
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visitors__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sd_office
+#: model:sd_office.visit_purpose,name:sd_office.record_100
+msgid "Meeting"
+msgstr "جلسه"
+
+#. module: sd_office
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visitors__mobile
+msgid "Mobile"
+msgstr "موبایل"
+
+#. module: sd_office
+#. odoo-javascript
+#: code:addons/custom/addons/sd_office/static/src/components/visitors/visitors_card.xml:0
+#: code:addons/sd_office/static/src/components/visitors/visitors_card.xml:0
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_settings__name
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visit_purpose__name
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visit_type__name
+msgid "Name"
+msgstr "نام"
+
+#. module: sd_office
+#: model:ir.ui.menu,name:sd_office.root_menu
+msgid "Office Admin"
+msgstr "مدیریت دفتر"
+
+#. module: sd_office
+#. odoo-python
+#: code:addons/custom/addons/sd_office/models/models.py:0
+#: code:addons/sd_office/models/models.py:0
+#: model_terms:ir.ui.view,arch_db:sd_office.sd_office_visitors_search
+msgid "Ongoing"
+msgstr "درجریان"
+
+#. module: sd_office
+#: model:sd_office.visit_purpose,name:sd_office.record_104
+#: model:sd_office.visit_type,name:sd_office.record_3
+msgid "Others"
+msgstr "غیره"
+
+#. module: sd_office
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_console__partner_id
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visitors__partner_id
+msgid "Partner"
+msgstr "طرف حساب"
+
+#. module: sd_office
+#: model:sd_office.visit_type,name:sd_office.record_0
+msgid "Phone"
+msgstr "تلفن"
+
+#. module: sd_office
+#. odoo-javascript
+#: code:addons/custom/addons/sd_office/static/src/components/visitors/visitors_card.xml:0
+#: code:addons/sd_office/static/src/components/visitors/visitors_card.xml:0
+msgid "Quantity"
+msgstr "تعداد"
+
+#. module: sd_office
+#: model:ir.model,name:sd_office.model_sd_office_console
+msgid "Sd Office Console"
+msgstr ""
+
+#. module: sd_office
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visit_purpose__sequence
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visit_type__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: sd_office
+#: model:sd_office.visit_purpose,name:sd_office.record_103
+msgid "Service"
+msgstr "خدمات"
+
+#. module: sd_office
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_console__start_date
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visitors__start_date
+msgid "Start Date"
+msgstr "تاریخ شروع"
+
+#. module: sd_office
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visitors__subject
+msgid "Subject"
+msgstr "موضوع"
+
+#. module: sd_office
+#: model:res.groups,name:sd_office.group_sd_office_users
+msgid "Users"
+msgstr "کاربران"
+
+#. module: sd_office
+#: model:sd_office.visit_type,name:sd_office.record_1
+msgid "Visit"
+msgstr "حضوری"
+
+#. module: sd_office
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visitors__visit_purpose
+msgid "Visit Purpose"
+msgstr "دلیل تماس"
+
+#. module: sd_office
+#: model:ir.model.fields,field_description:sd_office.field_sd_office_visitors__visit_type
+msgid "Visit Type"
+msgstr "نوع تماس"
+
+#. module: sd_office
+#: model:ir.ui.menu,name:sd_office.visit_purpose_menu
+msgid "Visitor Purpose"
+msgstr "دلیل تماس"
+
+#. module: sd_office
+#: model:ir.ui.menu,name:sd_office.visit_type_menu
+msgid "Visitor Type"
+msgstr "نوع تماس"
+
+#. module: sd_office
+#: model:ir.actions.act_window,name:sd_office.action_window_sd_office_visitors
+#: model:ir.ui.menu,name:sd_office.visitors_menu
+msgid "Visitors"
+msgstr "تماس ها"
+
+#. module: sd_office
+#: model:ir.actions.act_window,name:sd_office.console_wizard_action
+msgid "annual Report"
+msgstr ""
+
+#. module: sd_office
+#: model:ir.module.category,description:sd_office.module_category_sd_office
+msgid "requests."
+msgstr ""
+
+#. module: sd_office
+#: model:ir.module.category,name:sd_office.module_category_sd_office
+msgid "sd_office"
+msgstr ""
+
+#. module: sd_office
+#: model:ir.model,name:sd_office.model_sd_office_settings
+msgid "sd_office.settings"
+msgstr ""
+
+#. module: sd_office
+#: model:ir.model,name:sd_office.model_sd_office_visit_purpose
+msgid "sd_office.visit_purpose"
+msgstr ""
+
+#. module: sd_office
+#: model:ir.model,name:sd_office.model_sd_office_visit_type
+msgid "sd_office.visit_type"
+msgstr ""
+
+#. module: sd_office
+#: model:ir.model,name:sd_office.model_sd_office_visitors
+msgid "sd_office.visitors"
+msgstr ""
+
+#. module: sd_office
+#: model:ir.actions.act_window,name:sd_office.action_window_sd_office_visit_purpose
+msgid "visit Purpose"
+msgstr ""
+
+#. module: sd_office
+#: model:ir.actions.act_window,name:sd_office.action_window_sd_office_visit_type
+msgid "visit Type"
+msgstr ""

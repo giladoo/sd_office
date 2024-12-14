@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sd_office_console_admins,sd_office.console,model_sd_office_console,sd_office.group_sd_office_admins,1,1,1,1
+access_sd_office_visitors_admins,sd_office.visitors,model_sd_office_visitors,sd_office.group_sd_office_admins,1,1,1,1
+access_sd_office_visitors_users,sd_office.visitors,model_sd_office_visitors,sd_office.group_sd_office_users,1,0,0,0
+access_sd_office_visit_type_admins,sd_office.visit_type,model_sd_office_visit_type,sd_office.group_sd_office_admins,1,1,1,1
+access_sd_office_visit_type_users,sd_office.visit_type,model_sd_office_visit_type,sd_office.group_sd_office_users,1,0,0,0
+access_sd_office_visit_purpose_admins,sd_office.visit_purpose,model_sd_office_visit_purpose,sd_office.group_sd_office_admins,1,1,1,1
+access_sd_office_visit_purpose_users,sd_office.visit_purpose,model_sd_office_visit_purpose,sd_office.group_sd_office_users,1,0,0,0

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="visitors_card" owl="1"  >
+        <div class="col-sm-3 m-0 p-0"  >
+
+            <div class="shadow border m-2 p-3 bg-white text-center sd_office_visitors_card "
+                 t-on-click="props.hasOwnProperty('onClick') ? ()=>props.onClick() : ''"
+                 t-attf-style=" {{props.hasOwnProperty('onClick') ? 'cursor: pointer;' : ''}}">
+                <div class="h1 fw-bold text-dark"><span t-esc="props.value"></span></div>
+                <div class="h3 text-muted"><span t-esc="props.name" ></span></div>
+                <div class="h5 text-muted">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="props.visits" t-as="visit" t-key="visit.name">
+                                <td t-esc="visit.name"></td>
+                                <td t-esc="visit.quantity"></td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+<!--                <div class="h3 text-muted"><span t-esc="props.status"></span></div>-->
+<!--                <div class="text-muted" t-raw="props.link"></div>-->
+            </div>
+        </div>
+
+    </t>
+</templates>
