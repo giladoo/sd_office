@@ -5,8 +5,8 @@
             <field name="model">sd_office.visitors</field>
             <field name="arch" type="xml">
                 <list editable="bottom" expand="1"
-                      decoration-bf="write_date &gt; (datetime.datetime.now() - datetime.timedelta(hours=3, minutes=31)).strftime('%Y-%m-%d %H:%M:%S')"
-                      decoration-info="write_date &gt; (datetime.datetime.now() - datetime.timedelta(hours=3, minutes=31)).strftime('%Y-%m-%d %H:%M:%S')"
+                      decoration-bf="write_date &gt; (datetime.datetime.now() - datetime.timedelta(hours=3, minutes=32)).strftime('%Y-%m-%d %H:%M:%S')"
+                      decoration-info="write_date &gt; (datetime.datetime.now() - datetime.timedelta(hours=3, minutes=32)).strftime('%Y-%m-%d %H:%M:%S')"
                 >
                     <button name="visit_ended" type="object" class="btn bg-success-light shadow" icon="fa-clock-o" >
 
@@ -51,10 +51,15 @@
                     <field name="visit_purpose" />
                     <field name="start_date"/>
                     <field name="end_date"/>
-<!--                    <filter name="today" string="Today" domain="[ ('start_date', '&gt;=', (datetime.datetime.now().replace(hour=0, minute=0, second=0) - datetime.timedelta(hours=3, minutes=30)).strftime('%Y-%m-%d %H:%M:%S')),]"/>-->
-                    <filter name="ongoing" string="Ongoing" domain="['|', ('end_date', '=', False),('write_date', '&gt;', (datetime.datetime.now() - datetime.timedelta(hours=3, minutes=31)).strftime('%Y-%m-%d %H:%M:%S'))]"/>
+                    <filter name="today" string="Today" domain="['&amp;', ('start_date', '&gt;=', datetime.datetime.combine(context_today(), datetime.time(0, 0, 0)).to_utc().strftime('%Y-%m-%d %H:%M:%S')), ('start_date', '&lt;=', datetime.datetime.combine(context_today() + relativedelta(days = 1), datetime.time(0, 0, 0)).to_utc().strftime('%Y-%m-%d %H:%M:%S'))]"/>
+                    <filter name="yesterday" string="Yesterday" domain="['&amp;', ('start_date', '&gt;=', datetime.datetime.combine(context_today() + relativedelta(days = -1), datetime.time(0, 0, 0)).to_utc().strftime('%Y-%m-%d %H:%M:%S')), ('start_date', '&lt;=', datetime.datetime.combine(context_today(), datetime.time(0, 0, 0)).to_utc().strftime('%Y-%m-%d %H:%M:%S'))]"/>
+                    <filter name="last_week" string="Last Week" domain="['&amp;', ('start_date', '&gt;=', datetime.datetime.combine(context_today() + relativedelta(days = -6), datetime.time(0, 0, 0)).to_utc().strftime('%Y-%m-%d %H:%M:%S')), ('start_date', '&lt;=', datetime.datetime.combine(context_today() + relativedelta(days = 1), datetime.time(0, 0, 0)).to_utc().strftime('%Y-%m-%d %H:%M:%S'))]"/>
+                    <separator/>
+                    <filter name="ongoing" string="Ongoing" domain="['|', ('end_date', '=', False),('write_date', '&gt;', (datetime.datetime.now() - datetime.timedelta(hours=3, minutes=32)).strftime('%Y-%m-%d %H:%M:%S'))]"/>
+                    <filter name="ended" string="Ended" domain="[('end_date', '!=', False)]"/>
                     <filter name="visit_type" string="Visit Type" context="{'group_by': 'visit_type'}"/>
                     <filter name="visit_purpose" string="Visit Purpose" context="{'group_by': 'visit_purpose'}"/>
+                    <filter name="day" string="Day" context="{'group_by': 'start_date:day'}"/>
                 </search>
             </field>
         </record>
@@ -92,13 +97,15 @@
             <field name="name">Visitors</field>
             <field name="res_model">sd_office.visitors</field>
             <field name="view_mode">list,graph</field>
-            <field name="context">{'search_default_ongoing': 1,}</field>
+            <field name="context">{'search_default_today': 1,'search_default_ongoing': 1,}</field>
         </record>
 
         <record model="ir.actions.act_window" id="action_window_sd_office_visitors_graph">
             <field name="name">Visitors</field>
             <field name="res_model">sd_office.visitors</field>
             <field name="view_mode">graph</field>
+            <field name="context">{'search_default_last_week': 1,}</field>
+
         </record>
 
         <record model="ir.actions.act_window" id="action_window_sd_office_visit_type">

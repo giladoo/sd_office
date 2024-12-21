@@ -47,7 +47,7 @@ export class OfficeConsole extends Component {
             type: "ir.actions.act_window",
             view_mode: "list",
 //            domain: domain,
-            context: {'search_default_ongoing': 1},
+            context: {'search_default_today': 1, 'search_default_ongoing': 1},
 //            target: "current",
         });
         }
