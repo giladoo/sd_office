@@ -60,6 +60,7 @@
                     <filter name="visit_type" string="Visit Type" context="{'group_by': 'visit_type'}"/>
                     <filter name="visit_purpose" string="Visit Purpose" context="{'group_by': 'visit_purpose'}"/>
                     <filter name="day" string="Day" context="{'group_by': 'start_date:day'}"/>
+                    <filter name="week" string="Week" context="{'group_by': 'start_date:week'}"/>
                 </search>
             </field>
         </record>
@@ -104,7 +105,8 @@
             <field name="name">Visitors</field>
             <field name="res_model">sd_office.visitors</field>
             <field name="view_mode">graph</field>
-            <field name="context">{'search_default_last_week': 1,}</field>
+<!--            <field name="context">{'search_default_last_week': 1, 'search_default_week': 1, 'search_default_visit_purpose': 1,}</field>-->
+            <field name="context">{}</field>
 
         </record>
 

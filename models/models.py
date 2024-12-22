@@ -2,7 +2,7 @@
 from datetime import datetime, timedelta
 from odoo import models, fields, api, tools, _
 import pytz
-
+import jdatetimext
 
 class sd_office_settings(models.Model):
     _name = 'sd_office.settings'
@@ -23,7 +23,8 @@ class SdOfficeVisitors(models.Model):
                                     default=lambda self: self.env['sd_office.visit_purpose'].search([], limit=1))
     subject = fields.Html()
     start_date = fields.Datetime(required=True, default=lambda self: datetime.now() )
-    end_date = fields.Datetime(required=False, )
+    end_date = fields.Datetime(required=False,)
+
 
     def visit_ended(self):
         self.end_date = datetime.now()
